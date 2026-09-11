@@ -32,6 +32,8 @@ button, input, textarea { font: inherit; }
 h1, h2, h3, p { margin-top: 0; }
 h1 { max-width: 800px; margin-bottom: 1.5rem; font-size: clamp(3.5rem, 8vw, 7.8rem); line-height: .95; letter-spacing: -.08em; }
 .hero-lede { max-width: 480px; margin-bottom: 2.4rem; color: var(--muted); font-size: 1.1rem; }
+.hero-details { display: flex; flex-wrap: wrap; gap: 1.5rem; margin: -1rem 0 2.4rem; color: var(--muted); font-family: 'DM Mono', monospace; font-size: .65rem; text-transform: uppercase; }
+.hero-details strong { display: block; margin-top: .25rem; color: var(--pink-soft); font-family: 'Manrope', sans-serif; font-size: .75rem; text-transform: none; }
 .hero-actions { display: flex; align-items: center; gap: 2rem; }
 .button { display: inline-flex; align-items: center; justify-content: center; gap: .8rem; min-height: 48px; padding: .8rem 1.25rem; border: 1px solid var(--pink); cursor: pointer; font-size: .76rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; transition: box-shadow .2s, background .2s, transform .2s; }
 .button-primary { color: var(--black); background: var(--pink); }
@@ -89,6 +91,9 @@ h2 { margin-bottom: 1.8rem; font-size: clamp(2.8rem, 5vw, 5.5rem); line-height: 
 .contact { background: var(--black-soft); }
 .contact-grid { display: grid; grid-template-columns: 1fr .85fr; gap: 8rem; }
 .contact-copy > p:not(.eyebrow) { max-width: 400px; color: var(--muted); }
+.contact-details { display: flex; flex-direction: column; gap: .35rem; margin-top: 2rem; color: var(--pink-soft); font-family: 'DM Mono', monospace; font-size: .72rem; }
+.contact-details a:hover { color: var(--pink); }
+.contact-details span { color: var(--muted); }
 .social-links { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 3rem; color: var(--pink-soft); font-family: 'DM Mono', monospace; font-size: .7rem; text-transform: uppercase; }
 .social-links a:hover { color: var(--pink); }
 .contact-form { display: flex; flex-direction: column; gap: .6rem; padding: 2rem; border: 1px solid var(--line); }

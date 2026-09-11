@@ -2,7 +2,7 @@
   "name": "panupong-portfolio",
   "version": "1.0.0",
   "private": true,
-  "description": "Personal portfolio website for Panupong Sangkhathin",
+  "description": "Personal portfolio website for Panupong Sangkatin",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
