@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --black: #050505;
-  --black-soft: #0a0a0a;
+  --black: #261B22;
+  --black-soft: #1f161c;
   --pink: #ff1493;
   --pink-bright: #ff69b4;
   --pink-soft: #ffb1d6;
@@ -18,7 +18,7 @@ body { margin: 0; color: var(--ink); background: var(--black); font-family: 'Man
 a { color: inherit; text-decoration: none; }
 button, input, textarea { font: inherit; }
 .container { width: min(var(--max-width), calc(100% - 3rem)); margin: 0 auto; }
-.site-header { position: fixed; z-index: 10; top: 0; width: 100%; border-bottom: 1px solid rgba(255, 20, 147, .18); background: rgba(5, 5, 5, .9); backdrop-filter: blur(16px); }
+.site-header { position: fixed; z-index: 10; top: 0; width: 100%; border-bottom: 1px solid rgba(255, 20, 147, .18); background: rgba(38, 27, 34, .9); backdrop-filter: blur(16px); }
 .nav { display: flex; align-items: center; justify-content: space-between; min-height: 78px; }
 .brand { color: var(--pink); font-size: 1.35rem; font-weight: 800; letter-spacing: -.08em; }
 .brand span, h1 span, h2 span { color: var(--pink); }
@@ -63,31 +63,35 @@ h2 { margin-bottom: 1.8rem; font-size: clamp(2.8rem, 5vw, 5.5rem); line-height: 
 .centered { text-align: center; }
 .skills { background: var(--black-soft); }
 .skills-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 4rem; }
-.skill-card { min-height: 310px; padding: 1.5rem; border: 1px solid var(--line); background: rgba(0, 0, 0, .35); transition: border-color .2s, transform .2s; }
+.skill-card { min-height: 310px; padding: 1.5rem; border: 1px solid var(--line); background: rgba(38, 27, 34, .35); transition: border-color .2s, transform .2s; }
 .skill-card:hover { border-color: var(--pink); transform: translateY(-5px); }
 .skill-card-highlight { background: var(--pink); color: var(--black); }
 .card-number { color: var(--pink); font-family: 'DM Mono', monospace; font-size: .7rem; }
 .skill-card-highlight .card-number, .skill-card-highlight .tag-list span { color: var(--black); border-color: var(--black); }
 .skill-card h3 { margin: 4rem 0 1rem; font-size: 1.3rem; }
 .skill-card p { min-height: 80px; color: var(--muted); font-size: .85rem; }
-.skill-card-highlight p { color: rgba(5, 5, 5, .7); }
+.skill-card-highlight p { color: rgba(38, 27, 34, .7); }
 .tag-list, .project-tags { display: flex; flex-wrap: wrap; gap: .45rem; }
 .tag-list span, .project-tags span { padding: .3rem .5rem; border: 1px solid var(--line); color: var(--pink-soft); font-family: 'DM Mono', monospace; font-size: .59rem; }
 .experience-heading { display: flex; align-items: end; justify-content: space-between; gap: 2rem; }
 .section-intro { max-width: 320px; margin: 0 0 1.8rem; color: var(--muted); font-size: .9rem; }
 .project-list { margin-top: 4rem; border-top: 1px solid var(--line); }
-.project-card { padding: 2.3rem 0; border-bottom: 1px solid var(--line); }
+.project-card { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); column-gap: 2rem; padding: 2.3rem 0; border-bottom: 1px solid rgba(255, 20, 147, .2); background: #261B22; }
+.project-card > .project-meta { grid-column: 1 / -1; }
+.project-card > .project-image { grid-column: 1; grid-row: 2 / span 3; align-self: start; width: 100%; height: 250px; border: 1px solid rgba(255, 20, 147, .35); border-radius: 12px; object-fit: cover; filter: grayscale(80%); transition: filter .35s ease, box-shadow .35s ease; }
+.project-card > .project-image:hover { filter: grayscale(0%); box-shadow: 0 4px 20px rgba(255, 20, 147, .2); }
 .project-meta { display: flex; justify-content: space-between; margin-bottom: 1.4rem; color: var(--pink); font-family: 'DM Mono', monospace; font-size: .65rem; letter-spacing: .08em; text-transform: uppercase; }
 .project-meta .award { padding: .3rem .5rem; border: 1px solid var(--pink); }
-.project-content { display: grid; grid-template-columns: 1fr 1.1fr; gap: 4rem; }
+.project-card > .project-content, .project-card > .project-tags, .project-card > .project-stats { grid-column: 2; }
+.project-card > .project-content { display: block; }
 .project-content h3 { margin-bottom: .25rem; font-size: clamp(1.5rem, 3vw, 2.5rem); letter-spacing: -.05em; }
 .project-content p { color: var(--muted); font-size: .92rem; }
 .project-type { color: var(--pink-soft) !important; font-family: 'DM Mono', monospace; font-size: .67rem !important; }
 .project-stats { display: flex; gap: 3rem; margin-top: 2rem; padding-top: 1.4rem; border-top: 1px solid var(--line); color: var(--muted); font-family: 'DM Mono', monospace; font-size: .65rem; }
 .project-stats strong { display: block; color: var(--pink); font-size: 1.4rem; font-family: 'Manrope', sans-serif; }
-.project-tags { margin-top: .7rem; }
+.project-tags { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: .7rem; }
+.project-tags span { padding: 4px 10px; border: 1px solid var(--pink); border-radius: 999px; color: var(--pink); background: transparent; font-family: 'DM Mono', monospace; font-size: .59rem; }
 .compact-card { padding: 1.8rem 0; }
-.compact-card .project-content { grid-template-columns: 1fr 1fr; }
 .contact { background: var(--black-soft); }
 .contact-grid { display: grid; grid-template-columns: 1fr .85fr; gap: 8rem; }
 .contact-copy > p:not(.eyebrow) { max-width: 400px; color: var(--muted); }
@@ -128,6 +132,10 @@ h2 { margin-bottom: 1.8rem; font-size: clamp(2.8rem, 5vw, 5.5rem); line-height: 
   .skill-card h3 { margin-top: 2.5rem; }
   .skill-card p { min-height: 0; }
   .about-facts, .project-stats { flex-direction: column; gap: 1rem; }
-  .project-content, .compact-card .project-content { grid-template-columns: 1fr; gap: 1rem; }
+  .project-card { display: flex; flex-direction: column; gap: 0; }
+  .project-card > .project-image, .project-card > .project-content, .project-card > .project-tags, .project-card > .project-stats { width: 100%; }
+  .project-card > .project-image { order: 2; height: 220px; margin-bottom: 1.5rem; }
+  .project-card > .project-content { order: 3; }
+  .project-card > .project-tags, .project-card > .project-stats { order: 4; }
   .footer .container { align-items: flex-start; flex-direction: column; }
 }
