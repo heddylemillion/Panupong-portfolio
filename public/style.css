@@ -83,6 +83,12 @@ h2 { margin-bottom: 1.8rem; font-size: clamp(2.8rem, 5vw, 5.5rem); line-height: 
 .project-meta { display: flex; justify-content: space-between; margin-bottom: 1.4rem; color: var(--pink); font-family: 'DM Mono', monospace; font-size: .65rem; letter-spacing: .08em; text-transform: uppercase; }
 .project-meta .award { padding: .3rem .5rem; border: 1px solid var(--pink); }
 .project-card > .project-content, .project-card > .project-tags, .project-card > .project-stats { grid-column: 2; }
+.project-card > .certificate-link { grid-column: 2; justify-self: start; margin-top: 1rem; padding: .85rem 1.1rem; border: 1px solid var(--pink); color: var(--black); background: var(--pink); cursor: pointer; font-family: 'DM Mono', monospace; font-size: .68rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; transition: box-shadow .2s, transform .2s, background .2s; }
+.certificate-link span { margin-left: .35rem; }
+.certificate-link:hover, .certificate-link:focus { box-shadow: 0 0 22px rgba(255, 20, 147, .45); transform: translateY(-2px); }
+.certificate-link[aria-expanded='true'] { color: var(--pink); background: transparent; }
+.project-card > .certificate-preview { grid-column: 1 / -1; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+.certificate-preview img { display: block; width: min(100%, 900px); height: auto; margin: 0 auto; border: 1px solid var(--line); }
 .project-card > .project-content { display: block; }
 .project-content h3 { margin-bottom: .25rem; font-size: clamp(1.5rem, 3vw, 2.5rem); letter-spacing: -.05em; }
 .project-content p { color: var(--muted); font-size: .92rem; }
@@ -133,9 +139,11 @@ h2 { margin-bottom: 1.8rem; font-size: clamp(2.8rem, 5vw, 5.5rem); line-height: 
   .skill-card p { min-height: 0; }
   .about-facts, .project-stats { flex-direction: column; gap: 1rem; }
   .project-card { display: flex; flex-direction: column; gap: 0; }
-  .project-card > .project-image, .project-card > .project-content, .project-card > .project-tags, .project-card > .project-stats { width: 100%; }
+  .project-card > .project-image, .project-card > .project-content, .project-card > .project-tags, .project-card > .project-stats, .project-card > .certificate-link, .project-card > .certificate-preview { width: 100%; }
   .project-card > .project-image { order: 2; height: 220px; margin-bottom: 1.5rem; }
   .project-card > .project-content { order: 3; }
   .project-card > .project-tags, .project-card > .project-stats { order: 4; }
+  .project-card > .certificate-link { order: 5; }
+  .project-card > .certificate-preview { order: 6; }
   .footer .container { align-items: flex-start; flex-direction: column; }
 }

@@ -102,23 +102,31 @@
             <img class="project-image" src="images/pixie-box.jpeg" alt="PIXIE BOX Learn Lab project team" loading="lazy">
             <div class="project-content"><div><h3>PIXIE BOX</h3><p class="project-type">Learn Lab 2025: Soft Power Beyond AI</p></div><p>A smart photobooth built to make traditional Thai Likay culture feel playful and current. As Backend Developer and an ideation lead, I supported stable data processing and AI integration for real-time costume transformation and pose matching, while researching the audience and validating the product direction.</p></div>
             <div class="project-tags"><span>Backend</span><span>AI pose estimation</span><span>Business Model Canvas</span></div>
+            <button class="certificate-link" type="button" aria-expanded="false">Show certificate <span aria-hidden="true">↘</span></button>
+            <div class="certificate-preview" hidden><img src="images/pixie-box-certificate.jpg" alt="PIXIE BOX certificate"></div>
           </article>
           <article class="project-card">
             <div class="project-meta"><span>2026</span><span>Top 8 finalist</span></div>
             <img class="project-image" src="images/automation-robot.jpeg" alt="Automation Robot and AI competition robotic arm" loading="lazy">
             <div class="project-content"><div><h3>Automation Robot & AI</h3><p class="project-type">ABB Automation & AI Competition</p></div><p>Competing against more than 40 teams, I managed the robotic positioning system in a 20-minute, no-practice environment. I translated computer-vision output into precise X, Y, Z coordinates and planned safe paths so the robotic arm could reach, grasp, and sort target objects.</p></div>
             <div class="project-tags"><span>Robotic positioning</span><span>Path planning</span><span>Vision data</span></div>
+            <button class="certificate-link" type="button" aria-expanded="false">Show certificate <span aria-hidden="true">↘</span></button>
+            <div class="certificate-preview" hidden><img src="images/automation-robot-certificate.jpeg" alt="Automation Robot and AI certificate"></div>
           </article>
           <article class="project-card">
             <div class="project-meta"><span>2026</span><span>Top 16 finalist</span></div>
-            <img class="project-image" src="images/robo-punching.jpeg" alt="Robo Punching PLC competition robot" loading="lazy">
+            <img class="project-image" src="images/robo-punch.jpeg" alt="Robo Punching PLC competition robot" loading="lazy">
             <div class="project-content"><div><h3>Robo Punching</h3><p class="project-type">TPA PLC Competition 2026</p></div><p>With Team Bananacat, I led CAD design in Autodesk Fusion, balanced strength and weight with an aluminum-profile structure, integrated home-setting limit switches, and programmed precise punching sequences in GX Works 3. The robot responded to a blue-light target while following competition rules.</p></div>
             <div class="project-tags"><span>Autodesk Fusion</span><span>GX Works 3</span><span>PLC programming</span></div>
+            <button class="certificate-link" type="button" aria-expanded="false">Show certificate <span aria-hidden="true">↘</span></button>
+            <div class="certificate-preview" hidden><img src="images/robo-punching-certificate.jpg" alt="Robo Punching certificate"></div>
           </article>
           <article class="project-card compact-card">
             <div class="project-meta"><span>2026</span><span>5th place</span></div>
             <img class="project-image" src="images/labview-battle.jpeg" alt="LabVIEW Battle Thailand competition workspace" loading="lazy">
             <div class="project-content"><div><h3>LabVIEW Battle Thailand</h3><p class="project-type">Signal processing competition</p></div><p>Placed 5th by modifying existing block diagrams under pressure and using NI LabVIEW tools for signal processing, measurement, data acquisition, system testing, and simulation.</p></div>
+            <button class="certificate-link" type="button" aria-expanded="false">Show certificate <span aria-hidden="true">↘</span></button>
+            <div class="certificate-preview" hidden><img src="images/labview-battle-certificate.jpg" alt="LabVIEW Battle Thailand certificate"></div>
           </article>
           <article class="project-card compact-card">
             <div class="project-meta"><span>2026</span><span>Exchange program</span></div>
@@ -148,6 +156,13 @@
     navLinks.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
       navLinks.classList.remove('is-open');
       menuToggle.setAttribute('aria-expanded', 'false');
+    }));
+    document.querySelectorAll('.certificate-link').forEach((button) => button.addEventListener('click', () => {
+      const preview = button.nextElementSibling;
+      const isOpen = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', !isOpen);
+      button.firstChild.textContent = isOpen ? 'Show certificate ' : 'Hide certificate ';
+      preview.hidden = isOpen;
     }));
   </script>
 </body>
