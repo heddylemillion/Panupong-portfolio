@@ -114,7 +114,7 @@ h2 { margin-bottom: 1.8rem; font-size: clamp(2.8rem, 5vw, 5.5rem); line-height: 
 .contact-details span { color: var(--muted); }
 .social-links { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 3rem; color: var(--pink-soft); font-family: 'DM Mono', monospace; font-size: .7rem; text-transform: uppercase; }
 .social-links a:hover { color: var(--pink); }
-.contact-form { display: flex; flex-direction: column; gap: .6rem; padding: 2rem; border: 1px solid var(--line); }
+.contact-form { display: flex; flex-direction: column; gap: .6rem; padding: 0; border: 0; }
 .contact-form label { margin-top: .7rem; color: var(--pink); font-family: 'DM Mono', monospace; font-size: .65rem; text-transform: uppercase; }
 .contact-form input, .contact-form textarea { width: 100%; padding: .9rem 0; border: 0; border-bottom: 1px solid var(--line); outline: 0; resize: vertical; color: var(--ink); background: transparent; }
 .contact-form input:focus, .contact-form textarea:focus { border-color: var(--pink); }
